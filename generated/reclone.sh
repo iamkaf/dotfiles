@@ -1,0 +1,107 @@
+# Git clone commands for repositories in ~/code
+
+mkdir -p /home/kaf/code/art
+git clone https://github.com/iamkaf/pluie.git /home/kaf/code/art/pluie  # /home/kaf/code/art/pluie
+
+mkdir -p /home/kaf/code/sites
+git clone https://github.com/iamkaf/portfolio.git /home/kaf/code/sites/portfolio  # /home/kaf/code/sites/portfolio
+
+mkdir -p /home/kaf/code/sites
+git clone https://github.com/iamkaf/next-template.git /home/kaf/code/sites/next-template  # /home/kaf/code/sites/next-template
+
+mkdir -p /home/kaf/code/sites
+git clone https://github.com/iamkaf/translate.git /home/kaf/code/sites/translate  # /home/kaf/code/sites/translate (local)
+
+mkdir -p /home/kaf/code/sites/equipmental
+git clone https://github.com/iamkaf/crafting-experiment.git /home/kaf/code/sites/equipmental/crafting-experiment  # /home/kaf/code/sites/equipmental/crafting-experiment (dirty)
+
+mkdir -p /home/kaf/code/sites
+git clone https://github.com/iamkaf/equipmental.git /home/kaf/code/sites/equipmental  # /home/kaf/code/sites/equipmental (dirty)
+
+mkdir -p /home/kaf/code/sites
+git clone https://github.com/iamkaf/scoreboard-server.git /home/kaf/code/sites/scoreboard-server  # /home/kaf/code/sites/scoreboard-server (dirty)
+
+mkdir -p /home/kaf/code/sites
+git clone https://github.com/iamkaf/echo-registry.git /home/kaf/code/sites/echo-registry  # /home/kaf/code/sites/echo-registry
+
+mkdir -p /home/kaf/code/sites
+git clone https://github.com/iamkaf/ico.git /home/kaf/code/sites/ico  # /home/kaf/code/sites/ico
+
+mkdir -p /home/kaf/code/apps
+git clone https://github.com/iamkaf/modresources /home/kaf/code/apps/modresources  # /home/kaf/code/apps/modresources (dirty)
+
+mkdir -p /home/kaf/code/apps
+git clone https://github.com/iamkaf/athena.git /home/kaf/code/apps/athena  # /home/kaf/code/apps/athena (dirty)
+
+mkdir -p /home/kaf/code/apps
+git clone https://github.com/iamkaf/beam-mcp.git /home/kaf/code/apps/beam-mcp  # /home/kaf/code/apps/beam-mcp (dirty)
+
+mkdir -p /home/kaf/code/apps
+git clone https://github.com/iamkaf/mcp.git /home/kaf/code/apps/mcp  # /home/kaf/code/apps/mcp
+
+mkdir -p /home/kaf/code/apps
+git clone https://github.com/iamkaf/create-minecraft-mod.git /home/kaf/code/apps/create-minecraft-mod  # /home/kaf/code/apps/create-minecraft-mod
+
+mkdir -p /home/kaf/code/apps
+git clone https://github.com/iamkaf/warden /home/kaf/code/apps/warden  # /home/kaf/code/apps/warden
+
+mkdir -p /home/kaf/code/apps
+git clone https://github.com/iamkaf/beam.git /home/kaf/code/apps/beam  # /home/kaf/code/apps/beam
+
+mkdir -p /home/kaf/code/apps
+git clone https://github.com/iamkaf/maven-repo.git /home/kaf/code/apps/maven-repo  # /home/kaf/code/apps/maven-repo (dirty)
+
+mkdir -p /home/kaf/code/experiments
+git clone https://github.com/iamkaf/dotfiles.git /home/kaf/code/experiments/dotfiles  # /home/kaf/code/experiments/dotfiles (local, dirty)
+
+mkdir -p /home/kaf/code/experiments
+git clone https://github.com/iamkaf/suspend.git /home/kaf/code/experiments/suspend  # /home/kaf/code/experiments/suspend
+
+mkdir -p /home/kaf/code/experiments
+git clone https://github.com/iamkaf/mod-matrix.git /home/kaf/code/experiments/mod-matrix  # /home/kaf/code/experiments/mod-matrix
+
+mkdir -p /home/kaf/code/learning
+git clone https://github.com/iamkaf/rust-learning-roadmap.git /home/kaf/code/learning/rust-learning-roadmap  # /home/kaf/code/learning/rust-learning-roadmap
+
+mkdir -p /home/kaf/code/libraries
+git clone https://github.com/iamkaf/minecraft-version-validator.git /home/kaf/code/libraries/minecraft-version-validator  # /home/kaf/code/libraries/minecraft-version-validator
+
+mkdir -p /home/kaf/code/mods
+git clone https://github.com/iamkaf/gentle-hurt-cam.git /home/kaf/code/mods/gentle-hurt-cam  # /home/kaf/code/mods/gentle-hurt-cam (local)
+
+mkdir -p /home/kaf/code/mods/torch-toss
+git clone https://github.com/iamkaf/torch-toss /home/kaf/code/mods/torch-toss/torch-toss  # /home/kaf/code/mods/torch-toss/torch-toss (dirty)
+
+mkdir -p /home/kaf/code/mods/torch-toss
+git clone https://github.com/iamkaf/torch-toss /home/kaf/code/mods/torch-toss/torch-toss-for-porting  # /home/kaf/code/mods/torch-toss/torch-toss-for-porting
+
+mkdir -p /home/kaf/code/mods
+git clone https://github.com/iamkaf/snapshears.git /home/kaf/code/mods/snapshears  # /home/kaf/code/mods/snapshears
+
+mkdir -p /home/kaf/code/mods
+git clone https://github.com/iamkaf/happy-ghast-improvements.git /home/kaf/code/mods/happy-ghast-improvements  # /home/kaf/code/mods/happy-ghast-improvements (local)
+
+mkdir -p /home/kaf/code/mods/bonded-migration
+git clone https://github.com/iamkaf/bonded.git /home/kaf/code/mods/bonded-migration/bonded  # /home/kaf/code/mods/bonded-migration/bonded (dirty)
+
+mkdir -p /home/kaf/code/mods/bonded-migration
+git clone https://github.com/iamkaf/bonded /home/kaf/code/mods/bonded-migration/bonded-for-porting  # /home/kaf/code/mods/bonded-migration/bonded-for-porting
+
+mkdir -p /home/kaf/code/mods
+git clone https://github.com/iamkaf/exploding-sheep.git /home/kaf/code/mods/exploding-sheep  # /home/kaf/code/mods/exploding-sheep (local, dirty)
+
+mkdir -p /home/kaf/code/mods
+git clone https://github.com/iamkaf/mochila2.git /home/kaf/code/mods/mochila2  # /home/kaf/code/mods/mochila2
+
+mkdir -p /home/kaf/code/mods
+git clone https://github.com/iamkaf/amber.git /home/kaf/code/mods/amber  # /home/kaf/code/mods/amber
+
+mkdir -p /home/kaf/code/mods
+git clone https://github.com/iamkaf/kaf-hud.git /home/kaf/code/mods/kaf-hud  # /home/kaf/code/mods/kaf-hud
+
+mkdir -p /home/kaf/code/mods
+git clone https://github.com/iamkaf/liteminer.git /home/kaf/code/mods/liteminer  # /home/kaf/code/mods/liteminer
+
+mkdir -p /home/kaf/code/mods
+git clone https://github.com/iamkaf/hot-fireworks.git /home/kaf/code/mods/hot-fireworks  # /home/kaf/code/mods/hot-fireworks
+
