@@ -32,7 +32,7 @@ show_menu() {
     echo "  1) Install core utilities (git, jq, tree, flatpak, etc.)"
     echo "  2) Install dev tools (nvm, rust, uv, deno, java)"
     echo "  3) Install desktop apps (code, discord, steam, obsidian, etc.)"
-    echo "  4) Install dotfiles (TODO)"
+    echo "  4) Install dotfiles"
     echo "  5) Install Git Credential Manager"
     echo "  6) Install Docker"
     echo "  7) Recreate ~/code from git remotes"
@@ -57,7 +57,7 @@ run_selection() {
             run_script "install-apps.sh"
             ;;
         4)
-            echo "==> TODO: Install dotfiles"
+            run_script "install-dotfiles.sh"
             ;;
         5)
             run_script "install-gcm.sh"
@@ -73,7 +73,7 @@ run_selection() {
             run_script "install-core.sh"
             run_script "install-dev-tools.sh"
             run_script "install-apps.sh"
-            echo "==> TODO: Install dotfiles"
+            run_script "install-dotfiles.sh"
             run_script "install-gcm.sh"
             run_script "install-docker.sh"
             ;;
@@ -81,7 +81,7 @@ run_selection() {
             run_script "install-core.sh"
             run_script "install-dev-tools.sh"
             run_script "install-apps.sh"
-            echo "==> TODO: Install dotfiles"
+            run_script "install-dotfiles.sh"
             run_script "install-gcm.sh"
             run_script "install-docker.sh"
             echo "==> TODO: Recreate ~/code from git remotes"

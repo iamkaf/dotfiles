@@ -4,9 +4,9 @@ Tasks to complete for the dotfiles project.
 
 ## Bootstrap / Installation
 
-- [ ] Implement "Install dotfiles" option in `bootstrap/init.sh`
-  - Create `install-dotfiles.sh` script to symlink dotfiles to home directory
-  - Handle existing files with backup/prompt
+- [x] Implement "Install dotfiles" option in `bootstrap/init.sh`
+  - Create `install-dotfiles.sh` script to copy dotfiles to home directory
+  - Handle existing files with backup/prompt (future enhancement)
 
 - [ ] Implement "Recreate ~/code" option in `bootstrap/init.sh`
   - Should run generated `reclone.sh` from `export-repos.sh`
