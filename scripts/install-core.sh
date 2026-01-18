@@ -31,7 +31,11 @@ echo "==> Adding Flathub remote..."
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo "==> Creating bat symlink (batcat -> bat)..."
-sudo ln -sf /usr/bin/batcat /usr/bin/bat
+if [[ -f /usr/bin/batcat ]]; then
+    sudo ln -sf /usr/bin/batcat /usr/bin/bat
+else
+    echo "Warning: batcat not found, skipping bat symlink creation"
+fi
 
 echo "==> Updating tldr cache..."
 tldr --update

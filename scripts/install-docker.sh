@@ -41,5 +41,25 @@ echo "Running hello-world container..."
 sudo docker run hello-world
 
 echo ""
+echo "==> Installing NVIDIA Container Toolkit (for GPU support)..."
+echo "    Note: Skip this section if you don't have an NVIDIA GPU"
+echo "    Adding NVIDIA GPG key..."
+curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey \
+    | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
+
+echo "    Adding NVIDIA repository..."
+curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list \
+    | sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' \
+    | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+
+echo "    Installing nvidia-container-toolkit..."
+sudo apt-get update
+sudo apt-get install -y nvidia-container-toolkit
+
+echo "    Configuring Docker to use NVIDIA runtime..."
+sudo nvidia-ctk runtime configure --runtime=docker
+sudo systemctl restart docker
+
+echo ""
 echo "==> Done."
 echo "==> Run 'newgrp docker' to activate group changes, or log out and back in."

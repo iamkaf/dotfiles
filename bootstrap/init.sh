@@ -22,6 +22,50 @@ run_script() {
     bash "$script_path"
 }
 
+# Function to run the reclone script
+run_reclone() {
+    local reclone_path="$SCRIPT_DIR/../generated/reclone.sh"
+
+    if [[ ! -f "$reclone_path" ]]; then
+        echo "Error: Recreate script not found: $reclone_path"
+        echo "Please run ./scripts/export-repos.sh to generate it first"
+        return 1
+    fi
+
+    echo ""
+    echo "==> Recreating ~/code directory from git remotes..."
+    echo "    Using: $reclone_path"
+    bash "$reclone_path"
+}
+
+# Function to run Ollama container
+run_ollama() {
+    echo ""
+    echo "==> Starting Ollama container with GPU support..."
+    echo "    This will:"
+    echo "    - Download and run ollama/ollama image"
+    echo "    - Use all available GPUs (--gpus=all)"
+    echo "    - Create a named volume 'ollama' for persistence"
+    echo "    - Expose port 11434 for API access"
+    echo ""
+    read -p "Continue? (y/N) " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+        echo ""
+        echo "==> Ollama is now running!"
+        echo "    API available at: http://localhost:11434"
+        echo "    After installing dotfiles, use the 'ollama' alias:"
+        echo "      ollama pull llama3.2"
+        echo "      ollama run llama3.2"
+        echo "    Or use docker directly:"
+        echo "      docker exec -it ollama ollama pull llama3.2"
+        echo "      docker exec -it ollama ollama run llama3.2"
+    else
+        echo "Cancelled."
+    fi
+}
+
 # Main menu
 show_menu() {
     echo ""
@@ -34,10 +78,11 @@ show_menu() {
     echo "  3) Install desktop apps (code, discord, steam, obsidian, etc.)"
     echo "  4) Install dotfiles"
     echo "  5) Install Git Credential Manager"
-    echo "  6) Install Docker"
+    echo "  6) Install Docker (with NVIDIA toolkit)"
     echo "  7) Recreate ~/code from git remotes"
     echo "  8) Run all (1-6)"
     echo "  9) Run everything (1-7)"
+    echo "  o) Run Ollama (LLM server with GPU support)"
     echo "  q) Quit"
     echo ""
 }
@@ -66,8 +111,10 @@ run_selection() {
             run_script "install-docker.sh"
             ;;
         7)
-            echo "==> TODO: Recreate ~/code from git remotes"
-            echo "    Run: ./scripts/export-repos.sh > ~/code-reclone.sh"
+            run_reclone
+            ;;
+        o|O)
+            run_ollama
             ;;
         8)
             run_script "install-core.sh"
@@ -84,7 +131,7 @@ run_selection() {
             run_script "install-dotfiles.sh"
             run_script "install-gcm.sh"
             run_script "install-docker.sh"
-            echo "==> TODO: Recreate ~/code from git remotes"
+            run_reclone
             ;;
         q|Q)
             echo "Goodbye!"
