@@ -9,8 +9,10 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Function to run a script
 run_script() {
-    local script="$1"
-    local script_path="$SCRIPT_DIR/../scripts/$script"
+    local script_name="$1"
+    shift
+    local args="$@"
+    local script_path="$SCRIPT_DIR/../scripts/$script_name"
 
     if [[ ! -f "$script_path" ]]; then
         echo "Error: Script not found: $script_path"
@@ -18,8 +20,8 @@ run_script() {
     fi
 
     echo ""
-    echo "==> Running $script..."
-    bash "$script_path"
+    echo "==> Running $script_name..."
+    bash "$script_path" $args
 }
 
 # Main menu
@@ -45,11 +47,11 @@ run_selection() {
             run_script "export-dotfiles.sh"
             ;;
         2)
-            run_script "export-repos.sh"
+            run_script "export-repos.sh" "-o generated/reclone.sh"
             ;;
         3)
             run_script "export-dotfiles.sh"
-            run_script "export-repos.sh"
+            run_script "export-repos.sh" "-o generated/reclone.sh"
             ;;
         q|Q)
             echo "Goodbye!"

@@ -5,6 +5,12 @@ mkdir -p /home/kaf/code/art
 git clone https://github.com/iamkaf/pluie.git /home/kaf/code/art/pluie  # /home/kaf/code/art/pluie
 
 mkdir -p /home/kaf/code/sites
+git clone https://github.com/iamkaf/xc.git /home/kaf/code/sites/xc  # /home/kaf/code/sites/xc
+
+mkdir -p /home/kaf/code/sites
+git clone https://github.com/iamkaf/garden.git /home/kaf/code/sites/garden  # /home/kaf/code/sites/garden
+
+mkdir -p /home/kaf/code/sites
 git clone https://github.com/iamkaf/portfolio.git /home/kaf/code/sites/portfolio  # /home/kaf/code/sites/portfolio
 
 mkdir -p /home/kaf/code/sites
@@ -17,6 +23,9 @@ mkdir -p /home/kaf/code/sites
 git clone https://github.com/iamkaf/equipmental.git /home/kaf/code/sites/equipmental  # /home/kaf/code/sites/equipmental (dirty)
 
 mkdir -p /home/kaf/code/sites
+git clone https://github.com/iamkaf/gh-tree.git /home/kaf/code/sites/gh-tree  # /home/kaf/code/sites/gh-tree
+
+mkdir -p /home/kaf/code/sites
 git clone https://github.com/iamkaf/scoreboard-server.git /home/kaf/code/sites/scoreboard-server  # /home/kaf/code/sites/scoreboard-server (dirty)
 
 mkdir -p /home/kaf/code/sites
@@ -26,7 +35,7 @@ mkdir -p /home/kaf/code/sites
 git clone https://github.com/iamkaf/ico.git /home/kaf/code/sites/ico  # /home/kaf/code/sites/ico
 
 mkdir -p /home/kaf/code/apps
-git clone https://github.com/iamkaf/modresources /home/kaf/code/apps/modresources  # /home/kaf/code/apps/modresources (dirty)
+git clone https://github.com/iamkaf/modresources /home/kaf/code/apps/modresources  # /home/kaf/code/apps/modresources
 
 mkdir -p /home/kaf/code/apps
 git clone https://github.com/iamkaf/athena.git /home/kaf/code/apps/athena  # /home/kaf/code/apps/athena (dirty)
@@ -47,7 +56,7 @@ mkdir -p /home/kaf/code/apps
 git clone https://github.com/iamkaf/beam.git /home/kaf/code/apps/beam  # /home/kaf/code/apps/beam
 
 mkdir -p /home/kaf/code/apps
-git clone https://github.com/iamkaf/maven-repo.git /home/kaf/code/apps/maven-repo  # /home/kaf/code/apps/maven-repo (dirty)
+git clone https://github.com/iamkaf/maven-repo.git /home/kaf/code/apps/maven-repo  # /home/kaf/code/apps/maven-repo
 
 mkdir -p /home/kaf/code/experiments
 git clone https://github.com/iamkaf/dotfiles.git /home/kaf/code/experiments/dotfiles  # /home/kaf/code/experiments/dotfiles (dirty)
@@ -60,6 +69,12 @@ git clone https://github.com/iamkaf/mod-matrix.git /home/kaf/code/experiments/mo
 
 mkdir -p /home/kaf/code/learning
 git clone https://github.com/iamkaf/rust-learning-roadmap.git /home/kaf/code/learning/rust-learning-roadmap  # /home/kaf/code/learning/rust-learning-roadmap
+
+mkdir -p /home/kaf/code/libraries
+git clone https://github.com/iamkaf/splitdown.git /home/kaf/code/libraries/splitdown  # /home/kaf/code/libraries/splitdown
+
+mkdir -p /home/kaf/code/libraries
+git clone https://github.com/iamkaf/notebook-brutalism.git /home/kaf/code/libraries/notebook-brutalism  # /home/kaf/code/libraries/notebook-brutalism
 
 mkdir -p /home/kaf/code/libraries
 git clone https://github.com/iamkaf/minecraft-version-validator.git /home/kaf/code/libraries/minecraft-version-validator  # /home/kaf/code/libraries/minecraft-version-validator

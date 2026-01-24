@@ -11,6 +11,19 @@ alias nrtc='npm run typecheck'
 alias ncu='npx npm-check-updates'
 alias ollama='docker exec -it ollama ollama'
 
+hub() {
+    if [ -z "$1" ]; then
+        echo "Usage: hub <user>/<repo> or hub <repo>"
+        return 1
+    fi
+    
+    if [[ "$1" == *"/"* ]]; then
+        xdg-open "https://github.com/$1"
+    else
+        xdg-open "https://github.com/iamkaf/$1"
+    fi
+}
+
 kaf() {
     cat <<'EOF'
 ╔════════════════════════════════════════════════════════════╗
@@ -19,6 +32,10 @@ kaf() {
 
 Git:
   gpt    git push && git push --tags
+
+GitHub:
+  hub    hub <user>/<repo> or hub <repo> - Open GitHub repo in browser
+         (defaults to iamkaf/<repo>)
 
 NPM:
   nrd    npm run dev
