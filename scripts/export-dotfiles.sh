@@ -14,5 +14,10 @@ mkdir -p "$DOTFILES_DIR/dotfiles"
 echo "==> Copying ~/.bash_aliases..."
 cp "$HOME/.bash_aliases" "$DOTFILES_DIR/dotfiles/"
 
+if [[ -f "$HOME/.config/ghostty/config" ]]; then
+  echo "==> Copying ~/.config/ghostty/config..."
+  cp "$HOME/.config/ghostty/config" "$DOTFILES_DIR/dotfiles/"
+fi
+
 echo "==> Done."
 echo "==> Review changes with: git status"
