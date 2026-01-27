@@ -79,10 +79,9 @@ show_menu() {
     echo "  4) Install dotfiles"
     echo "  5) Install Git Credential Manager"
     echo "  6) Install Docker (with NVIDIA toolkit)"
-    echo "  7) Install Claude skills"
-    echo "  8) Recreate ~/code from git remotes"
-    echo "  9) Run all (1-7)"
-    echo "  0) Run everything (1-8)"
+    echo "  7) Recreate ~/code from git remotes"
+    echo "  9) Run all install scripts (1-6)"
+    echo "  0) Run everything (1-7)"
     echo "  o) Run Ollama (LLM server with GPU support)"
     echo "  q) Quit"
     echo ""
@@ -112,9 +111,6 @@ run_selection() {
             run_script "install-docker.sh"
             ;;
         7)
-            run_script "install-claude.sh"
-            ;;
-        8)
             run_reclone
             ;;
         o|O)
@@ -127,7 +123,6 @@ run_selection() {
             run_script "install-dotfiles.sh"
             run_script "install-gcm.sh"
             run_script "install-docker.sh"
-            run_script "install-claude.sh"
             ;;
         0)
             run_script "install-core.sh"
@@ -136,7 +131,6 @@ run_selection() {
             run_script "install-dotfiles.sh"
             run_script "install-gcm.sh"
             run_script "install-docker.sh"
-            run_script "install-claude.sh"
             run_reclone
             ;;
         q|Q)

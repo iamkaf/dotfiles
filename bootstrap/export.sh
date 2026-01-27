@@ -33,8 +33,7 @@ show_menu() {
     echo ""
     echo "  1) Export dotfiles (.bash_aliases)"
     echo "  2) Export repositories (~/code -> reclone.sh)"
-    echo "  3) Export Claude skills"
-    echo "  4) Export all (1-3)"
+    echo "  3) Export all (1-2)"
     echo "  q) Quit"
     echo ""
 }
@@ -51,12 +50,8 @@ run_selection() {
             run_script "export-repos.sh" "-o generated/reclone.sh"
             ;;
         3)
-            run_script "export-claude.sh"
-            ;;
-        4)
             run_script "export-dotfiles.sh"
             run_script "export-repos.sh" "-o generated/reclone.sh"
-            run_script "export-claude.sh"
             ;;
         q|Q)
             echo "Goodbye!"
